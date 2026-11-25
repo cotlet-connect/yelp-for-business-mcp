@@ -1,0 +1,29 @@
+[project]
+name = "yelp-for-business-mcp"
+version = "1.1.0"
+description = "Connect Yelp for Business to Claude Code, ChatGPT and any AI agent through Cotlet.dev, a hosted MCP server. No Yelp for Business API key needed."
+readme = "README.md"
+license = "Elastic-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Cotlet.dev", email = "contact@cotlet.dev" }]
+keywords = ["yelp for business", "yelp for business api", "yelp for business mcp", "mcp server", "claude", "chatgpt", "ai agent", "cotlet"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Office/Business"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://cotlet.dev/integrations/mcp/yelp-for-business?utm_source=pypi&utm_medium=package&utm_campaign=yelp-for-business"
+Source = "https://github.com/cotlet-connect/yelp-for-business-mcp"
+
+[project.scripts]
+yelp-for-business-mcp = "yelp_for_business_agent:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.force-include]
+"yelp_for_business_agent.py" = "yelp_for_business_agent.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["yelp_for_business_agent.py", "README.md", "LICENSE", "mcp.json", "Dockerfile", "glama.json", "skills", "examples", ".cursor"]
