@@ -113,6 +113,66 @@ python3 yelp_for_business_agent.py tools     # list Cotlet.dev tools
 python3 yelp_for_business_agent.py serve     # start the stdio MCP server (same as no argument)
 ```
 
+## What you can ask your AI to do in Yelp for Business
+
+These are real jobs Yelp for Business users asked about. Cotlet lets ChatGPT, Claude or any MCP client do them in your own signed-in Yelp for Business account.
+
+### Leads and quote requests
+
+#### Can ChatGPT or Claude reply to Yelp for Business Request a Quote leads fast?
+
+Yes. Yelp Leads on Zapier can pass new leads to other apps. With Cotlet, ChatGPT or Claude reads each new Request a Quote message in your own signed-in Yelp for Business account and drafts a reply that fits the job. Nothing is sent until you say yes.
+
+Ask your agent: "Show new Yelp Request a Quote messages and draft a reply to each. Send nothing until I approve."
+
+As an API endpoint: Yes. Save the new-lead read as an endpoint in Cotlet and call it every few minutes from n8n, Make or Zapier to get each lead with a draft reply.
+
+#### Can ChatGPT or Claude list the Yelp for Business leads that still have no reply?
+
+Yes. With Cotlet, your agent reads the leads from the last 7 days in your signed-in Yelp for Business account and lists the ones with no reply, oldest first, with the customer, the job and the ZIP code.
+
+Ask your agent: "Which leads from the last 7 days still have no reply? List them oldest first."
+
+As an API endpoint: Yes. Save the unanswered-lead list as an endpoint in Cotlet and call it every morning from n8n, Make or Zapier.
+
+### Reviews
+
+#### Can ChatGPT or Claude answer my reviews in Yelp for Business?
+
+Yes. With Cotlet, your agent lists this week's reviews with no owner reply in your signed-in Yelp for Business account and drafts a calm public reply to each. Nothing is posted until you say yes.
+
+Ask your agent: "List reviews from this week with no owner reply and draft a calm public reply to each."
+
+As an API endpoint: Yes. Save the review list as an endpoint in Cotlet and call it every week from n8n, Make or Zapier to get new reviews with a draft reply.
+
+#### Can ChatGPT or Claude watch my not recommended reviews in Yelp for Business?
+
+Yes. Yelp decides which reviews are not recommended, and Cotlet cannot change that. With Cotlet, your agent reads the not recommended reviews in your signed-in Yelp for Business account, counts them for the month and lists the new ones.
+
+Ask your agent: "Count my reviews that are not recommended this month and list the new ones."
+
+As an API endpoint: Yes. Save the count as an endpoint in Cotlet and call it monthly from n8n, Make or Zapier.
+
+### Ads and results
+
+#### Can ChatGPT or Claude tell me if my Yelp for Business ads pay off?
+
+Yes. With Cotlet, your agent reads your ad spend, leads, calls and clicks for the month in your signed-in Yelp for Business account and puts them side by side. Your ad budget and billing stay in your own hands.
+
+Ask your agent: "What did my Yelp ads cost this month, and how many leads, calls and clicks did they bring?"
+
+As an API endpoint: Yes. Save the ad report as an endpoint in Cotlet and call it every month from n8n, Make or Zapier to fill a Google Sheet.
+
+### Business hours
+
+#### Can ChatGPT or Claude set my holiday hours in Yelp for Business?
+
+Yes. With Cotlet, your agent opens your business information in your signed-in Yelp for Business account and sets special hours for the holidays. Nothing changes until you say yes.
+
+Ask your agent: "Set special hours for the holidays on my Yelp page. Show me the hours first and wait for my OK."
+
+As an API endpoint: Yes. Save the hours change as an endpoint in Cotlet and call it from n8n, Make or a script before each holiday, with your OK before it runs.
+
 ## Questions from Yelp for Business users
 
 **Does Yelp for Business have an API I can use with AI?**
